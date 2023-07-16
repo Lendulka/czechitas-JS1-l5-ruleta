@@ -1,0 +1,128 @@
+/* Používáme intuitivní výpočet rozměrů prvků. */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 1rem;
+}
+
+.container {
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: rgb(216, 22, 22);
+  margin: auto;
+}
+
+.img-container {
+  max-width: 100%;
+}
+
+.ruleta__img {
+  width: 300px;
+  height: 270px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  animation-name: roulette;
+  animation-duration: 6s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+}
+
+.ruleta,
+.ruleta__form,
+.ruleta__control {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: center;
+  cursor: pointer;
+}
+
+.figure {
+  height: 1.7rem;
+  width: 12rem;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#button-submit {
+  display: block;
+  margin: auto;
+  margin-top: 0.5rem;
+  padding: 0.3rem 1.5rem;
+  font-size: 0.9rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#button-submit:hover {
+  border: 2px solid rgb(236, 112, 112);
+  background-color: rgb(236, 112, 112);
+  color: #fff;
+  font-weight: 500;
+}
+
+.ruleta__figure {
+  margin: auto;
+}
+
+.ruleta__figure--zelena {
+  color: green;
+  font-weight: bold;
+}
+
+.ruleta__figure--cerna {
+  color: black;
+  font-weight: bold;
+}
+
+.ruleta__figure--cervena {
+  color: red;
+  font-weight: bold;
+}
+
+@keyframes roulette {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .ruleta__img {
+    width: 455px;
+    height: 410px;
+  }
+}

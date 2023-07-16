@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="script.js"></script>
+  <title>Ruleta</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Ruleta</h1>
+
+    <div class="img-container">
+      <img class="ruleta__img" src="./img/roulette.png" alt="ruleta" width="455" height="410" />
+    </div>
+
+    <div class="ruleta">
+
+      <form id="ruleta__form">
+
+        <div class="ruleta__control">
+          <label for="figure">Zadej číslo od 0 do 36: </label>
+          <input type="number" id="figure" class="figure" min="0" max="36" required autofocus />
+        </div>
+
+        <button type="submit" id="button-submit">Spin</button>
+
+      </form>
+
+      <div class="ruleta__figure"></div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
